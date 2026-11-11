@@ -57,6 +57,7 @@
         text-align: center;
         letter-spacing: 0.01em;
         white-space: nowrap;
+        will-change: opacity, filter;
         text-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
         animation:
           soonFade 15s ease-in-out infinite,
@@ -84,35 +85,50 @@
       @keyframes logoFade {
         0% {
           opacity: 0;
+          filter: blur(16px);
+          clip-path: inset(0 100% 0 0);
         }
         26.67% {
           opacity: 0;
+          filter: blur(16px);
+          clip-path: inset(0 100% 0 0);
         }
         30% {
           opacity: 1;
+          filter: blur(0);
+          clip-path: inset(0 0 0 0);
         }
         96.67% {
           opacity: 1;
+          filter: blur(0);
+          clip-path: inset(0 0 0 0);
         }
         100% {
           opacity: 0;
+          filter: blur(16px);
+          clip-path: inset(0 0 0 100%);
         }
       }
       @keyframes soonFade {
         0% {
           opacity: 1;
+          filter: blur(0);
         }
         26.67% {
           opacity: 1;
+          filter: blur(0);
         }
         30% {
           opacity: 0;
+          filter: blur(10px);
         }
         96.67% {
           opacity: 0;
+          filter: blur(10px);
         }
         100% {
           opacity: 1;
+          filter: blur(0);
         }
       }
     </style>
